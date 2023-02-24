@@ -1,6 +1,9 @@
 ### print("Hello world, it's Amir!")
 ---
-Expert in ML, CPS & IoT. Creating intelligent systems for real-world problems. Passionate about cutting-edge technologies.
+
+### If I need it, I'll build it
+
+As an expert in machine learning, cyber-physical systems, and IoT, I specialize in creating intelligent systems to solve real-world problems. I am passionate about staying up-to-date with the latest and greatest technologies and leveraging them to build innovative solutions.
 
 I thrive on collaborating with other experts and pushing the boundaries of what's possible with cutting-edge technologies.
 
