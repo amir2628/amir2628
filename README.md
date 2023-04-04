@@ -9,7 +9,7 @@ I thrive on collaborating with other experts and pushing the boundaries of what'
 
 <p align="center">
   <a href="https://github.com/amir2628">
-    <img src="https://skillicons.dev/icons?i=git,py,matlab,docker,aws,tensorflow,linux,vscode,androidstudio" />
+    <img src="https://skillicons.dev/icons?i=git,py,matlab,docker,aws,tensorflow,linux,vscode,androidstudio,flutter" />
   </a>
 </p>
 
