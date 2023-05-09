@@ -1,4 +1,5 @@
-### print("Hello world, it's Amir 🤖!")
+
+# `print("Hello world, it's Amir!")` <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" alt="Robot" width="50" height="50" />
 ---
 
 ### If I need it, I'll build it 🦾
