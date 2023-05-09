@@ -1,7 +1,7 @@
-### print("Hello world, it's Amir!")
+### print("Hello world, it's Amir 🤖!")
 ---
 
-### If I need it, I'll build it
+### If I need it, I'll build it 🦾
 
 As an expert in machine learning, cyber-physical systems, and IoT, I specialize in creating intelligent systems to solve real-world problems. I am passionate about staying up-to-date with the latest and greatest technologies and leveraging them to build innovative solutions.
 
