@@ -2,7 +2,7 @@
 # `print("Hello world, it's Amir!")` <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" alt="Robot" width="50" height="50" />
 ---
 
-# If I need it, I'll build it <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Mechanical%20Arm.png" alt="Mechanical Arm" width="50" height="50" />
+# If I need it, I'll build it <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Mechanical%20Arm.png" alt="Mechanical Arm" width="50" height="50" /> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" alt="Man Technologist Light Skin Tone" width="50" height="50" />
 
 As an expert in machine learning, cyber-physical systems, and IoT, I specialize in creating intelligent systems to solve real-world problems. I am passionate about staying up-to-date with the latest and greatest technologies and leveraging them to build innovative solutions.
 
