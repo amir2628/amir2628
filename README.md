@@ -34,11 +34,21 @@ I thrive on collaborating with other experts and pushing the boundaries of what'
   </a>
 </p>
 
-# Links <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" alt="Check Mark Button" width="25" height="25" />
+<!-- # Links <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" alt="Check Mark Button" width="25" height="25" />
+ -->
+---
 
-[<img align="center" alt="Orcid" width="48px" src="https://user-images.githubusercontent.com/56083377/219612673-0ded6209-1d0e-47a6-93d8-a13f4f972da4.svg" />](https://orcid.org/0000-0001-5671-3710)   [<img align="center" alt="Orcid" width="48px" src="https://user-images.githubusercontent.com/56083377/219613739-82611ccd-04a5-4d66-bd1d-e79760ee7859.png" />](https://www.linkedin.com/in/amir-bahrami-0921a697)
+<p align="center">
+  <a href="https://orcid.org/0000-0001-5671-3710">
+    <img alt="Orcid" width="48px" src="https://user-images.githubusercontent.com/56083377/219612673-0ded6209-1d0e-47a6-93d8-a13f4f972da4.svg">
+  </a>
+  
+  <a href="https://www.linkedin.com/in/amir-bahrami-0921a697">
+    <img alt="Orcid" width="48px" src="https://user-images.githubusercontent.com/56083377/219613739-82611ccd-04a5-4d66-bd1d-e79760ee7859.png">
+  </a>
+</p>
 
-- -
 
-<img align="left" alt="amir2628's Github Stats" src="https://github-readme-stats.vercel.app/api?username=amir2628&show_icons=true&hide_border=true&theme=buefy" />
-
+<p align="center">
+  <img alt="amir2628's Github Stats" src="https://github-readme-stats.vercel.app/api?username=amir2628&show_icons=true&hide_border=true&theme=buefy" />
+</p>
