@@ -12,10 +12,14 @@
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Mechanical%20Arm.png" alt="Mechanical Arm" width="50" height="50" /> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" alt="Man Technologist Light Skin Tone" width="50" height="50" /> 
 </h3>
 
-As an expert in machine learning, cyber-physical systems, and IoT, I specialize in creating intelligent systems to solve real-world problems. I am passionate about staying up-to-date with the latest and greatest technologies and leveraging them to build innovative solutions.
+<p align="center">
+  As an expert in machine learning, cyber-physical systems, and IoT, I specialize in creating intelligent systems to solve real-world problems. I am passionate about staying up-to-date with the latest and greatest technologies and leveraging them to build innovative solutions.
+</p>
 
-I thrive on collaborating with other experts and pushing the boundaries of what's possible with cutting-edge technologies.
-
+<p align="center">
+  I thrive on collaborating with other experts and pushing the boundaries of what's possible with cutting-edge technologies.
+</p>
+  
 <p align="center">
   <a href="https://github.com/amir2628">
     <img src="https://skillicons.dev/icons?i=git,docker,aws,linux" />
