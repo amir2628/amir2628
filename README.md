@@ -52,8 +52,7 @@
   </a>
 </p>
 
-<!--
+
 <p align="center">
   <img alt="amir2628's Github Stats" src="https://github-readme-stats.vercel.app/api?username=amir2628&show_icons=true&hide_border=true&theme=buefy" />
 </p>
--->
