@@ -50,7 +50,7 @@
  
  
  
- <h2><img src="https://user-images.githubusercontent.com/74038190/212257460-738ff738-247f-4445-a718-cdd0ca76e2db.gif" width="80px" /> &nbsp;Technology Arsenal&nbsp; <img src="https://user-images.githubusercontent.com/74038190/212257460-738ff738-247f-4445-a718-cdd0ca76e2db.gif" width="80px" /></h2>
+ <h2><&nbsp;Technology Arsenal&nbsp;</h2>
  
  <table style="border-collapse: separate; border-spacing: 15px; margin: 20px 0;">
  <tr>
