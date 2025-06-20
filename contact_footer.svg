@@ -1,0 +1,240 @@
+<svg fill="none" viewBox="0 0 800 300" width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        @keyframes transmission {
+          0%, 100% { 
+            transform: scaleX(1) scaleY(1);
+            filter: hue-rotate(0deg);
+          }
+          50% { 
+            transform: scaleX(1.05) scaleY(0.95);
+            filter: hue-rotate(180deg);
+          }
+        }
+        
+        @keyframes signalWave {
+          0% { transform: translateX(-100%) scaleY(0.5); opacity: 0; }
+          50% { opacity: 1; scaleY(1); }
+          100% { transform: translateX(200%) scaleY(0.5); opacity: 0; }
+        }
+        
+        @keyframes linkHover {
+          0%, 100% { 
+            transform: translateY(0px) scale(1);
+            box-shadow: 0 5px 15px rgba(255, 0, 128, 0.3);
+          }
+          50% { 
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(255, 0, 128, 0.5);
+          }
+        }
+        
+        @keyframes dataFlow {
+          0% { background-position: 0% 50%; }
+          100% { background-position: 100% 50%; }
+        }
+        
+        .container {
+          width: 100%;
+          height: 300px;
+          background: 
+            linear-gradient(135deg, #000000 0%, #1a0033 50%, #000000 100%),
+            repeating-linear-gradient(
+              45deg,
+              transparent,
+              transparent 2px,
+              rgba(255, 0, 128, 0.03) 2px,
+              rgba(255, 0, 128, 0.03) 4px
+            );
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 40px;
+          font-family: 'Courier New', monospace;
+          animation: transmission 8s ease-in-out infinite;
+        }
+        
+        .signal-waves {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: 
+            repeating-linear-gradient(
+              90deg,
+              rgba(0, 255, 255, 0.1) 0px,
+              rgba(0, 255, 255, 0.1) 1px,
+              transparent 1px,
+              transparent 20px
+            );
+          animation: signalWave 4s linear infinite;
+        }
+        
+        .title {
+          font-size: 2rem;
+          color: #ffffff;
+          text-transform: uppercase;
+          letter-spacing: 0.3em;
+          margin-bottom: 30px;
+          text-align: center;
+          text-shadow: 0 0 30px #ff0080;
+          animation: transmission 3s ease-in-out infinite;
+        }
+        
+        .contact-grid {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+          flex-wrap: wrap;
+          margin-bottom: 20px;
+        }
+        
+        .contact-link {
+          background: linear-gradient(45deg, rgba(255, 0, 128, 0.2) 0%, rgba(0, 128, 255, 0.2) 100%);
+          border: 2px solid;
+          border-image: linear-gradient(45deg, #ff0080, #0080ff) 1;
+          border-radius: 10px;
+          padding: 15px 25px;
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-size: 0.9rem;
+          position: relative;
+          overflow: hidden;
+          animation: linkHover 3s ease-in-out infinite;
+          transition: all 0.3s ease;
+        }
+        
+        .contact-link:nth-child(1) { animation-delay: 0s; }
+        .contact-link:nth-child(2) { animation-delay: 0.5s; }
+        .contact-link:nth-child(3) { animation-delay: 1s; }
+        .contact-link:nth-child(4) { animation-delay: 1.5s; }
+        
+        .contact-link::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          animation: dataFlow 2s linear infinite;
+        }
+        
+        .contact-link:hover {
+          transform: scale(1.15);
+          box-shadow: 0 0 30px rgba(255, 0, 128, 0.8);
+          border-image: linear-gradient(45deg, #ffff00, #ff0080) 1;
+        }
+        
+        .footer-message {
+          color: #00ffff;
+          font-size: 1rem;
+          text-align: center;
+          letter-spacing: 0.1em;
+          margin-top: 20px;
+          animation: transmission 4s ease-in-out infinite;
+        }
+        
+        .cyber-frame {
+          position: absolute;
+          border: 1px solid rgba(0, 255, 255, 0.3);
+          pointer-events: none;
+        }
+        
+        .cyber-frame.top {
+          top: 20px;
+          left: 20px;
+          right: 20px;
+          height: 1px;
+        }
+        
+        .cyber-frame.bottom {
+          bottom: 20px;
+          left: 20px;
+          right: 20px;
+          height: 1px;
+        }
+        
+        .cyber-frame.left {
+          top: 20px;
+          left: 20px;
+          bottom: 20px;
+          width: 1px;
+        }
+        
+        .cyber-frame.right {
+          top: 20px;
+          right: 20px;
+          bottom: 20px;
+          width: 1px;
+        }
+        
+        .terminal-cursor {
+          display: inline-block;
+          width: 10px;
+          height: 20px;
+          background: #00ffff;
+          animation: signalWave 1s infinite;
+          margin-left: 5px;
+        }
+        
+        @media (prefers-color-scheme: light) {
+          .container {
+            background: 
+              linear-gradient(135deg, #f0f0f0 0%, #e6e6ff 50%, #f0f0f0 100%);
+          }
+          .title, .contact-link, .footer-message {
+            color: #000000;
+          }
+          .contact-link {
+            background: linear-gradient(45deg, rgba(255, 0, 128, 0.1) 0%, rgba(0, 128, 255, 0.1) 100%);
+          }
+        }
+        
+        @media (prefers-reduced-motion) {
+          .container, .signal-waves, .contact-link, .title, .footer-message {
+            animation: none;
+          }
+        }
+      </style>
+      
+      <div class="container">
+        <div class="signal-waves"></div>
+        <div class="cyber-frame top"></div>
+        <div class="cyber-frame bottom"></div>
+        <div class="cyber-frame left"></div>
+        <div class="cyber-frame right"></div>
+        
+        <h2 class="title">🌐 ESTABLISH CONNECTION 🌐</h2>
+        
+        <div class="contact-grid">
+          <a href="https://orcid.org/0000-0001-5671-3710" class="contact-link">
+            📊 ORCID
+          </a>
+          <a href="https://www.linkedin.com/in/amir-bahrami-0921a697" class="contact-link">
+            💼 LINKEDIN
+          </a>
+          <a href="https://a-bahrami.com" class="contact-link">
+            🌍 PORTFOLIO
+          </a>
+          <a href="https://a-bahrami.com/resume" class="contact-link">
+            📄 PUBLICATIONS
+          </a>
+        </div>
+        
+        <div class="footer-message">
+          &gt; INNOVATION NEVER STOPS <span class="terminal-cursor"></span>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
