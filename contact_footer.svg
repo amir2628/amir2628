@@ -1,0 +1,306 @@
+<svg fill="none" viewBox="0 0 800 300" width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        @keyframes terminal_boot {
+          0% { 
+            transform: scaleX(0); 
+            filter: brightness(0);
+          }
+          50% { 
+            transform: scaleX(1) scaleY(0.1); 
+            filter: brightness(0.5);
+          }
+          100% { 
+            transform: scaleX(1) scaleY(1); 
+            filter: brightness(1);
+          }
+        }
+        
+        @keyframes connection_pulse {
+          0%, 100% { 
+            transform: scale(1);
+            box-shadow: 0 5px 20px rgba(255,255,255,0.2);
+          }
+          50% { 
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.4);
+          }
+        }
+        
+        @keyframes transmission_sweep {
+          0% { transform: translateX(-150%); opacity: 0; }
+          50% { opacity: 1; }
+          100% { transform: translateX(150%); opacity: 0; }
+        }
+        
+        @keyframes cursor_blink {
+          0%, 50% { opacity: 1; }
+          51%, 100% { opacity: 0; }
+        }
+        
+        .container {
+          width: 100%;
+          height: 300px;
+          background: 
+            linear-gradient(180deg, 
+              #1a1a1a 0%, 
+              #0d0d0d 50%, 
+              #000000 100%);
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 40px;
+          font-family: 'Impact', 'Arial Black', sans-serif;
+          animation: terminal_boot 4s ease-out;
+        }
+        
+        .infrastructure_grid {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: 
+            repeating-linear-gradient(
+              0deg,
+              transparent,
+              transparent 20px,
+              rgba(255,255,255,0.03) 20px,
+              rgba(255,255,255,0.03) 22px
+            ),
+            repeating-linear-gradient(
+              90deg,
+              transparent,
+              transparent 20px,
+              rgba(255,255,255,0.03) 20px,
+              rgba(255,255,255,0.03) 22px
+            );
+        }
+        
+        .connection_header {
+          background: 
+            linear-gradient(135deg, 
+              rgba(255,255,255,0.98) 0%, 
+              rgba(245,245,245,1) 50%, 
+              rgba(255,255,255,0.98) 100%);
+          color: #000000;
+          padding: 20px 50px;
+          margin-bottom: 40px;
+          font-size: 2rem;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.2em;
+          border: 6px solid #000000;
+          box-shadow: 
+            0 15px 30px rgba(0,0,0,0.6),
+            inset 0 0 0 3px #ffffff;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .connection_header::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+          animation: transmission_sweep 4s infinite;
+        }
+        
+        .connection_matrix {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 25px;
+          flex-wrap: wrap;
+          margin-bottom: 30px;
+        }
+        
+        .connection_node {
+          background: 
+            linear-gradient(135deg, 
+              rgba(0,0,0,0.95) 0%, 
+              rgba(40,40,40,0.98) 50%, 
+              rgba(0,0,0,0.95) 100%);
+          border: 4px solid #ffffff;
+          padding: 15px 25px;
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-size: 0.9rem;
+          position: relative;
+          overflow: hidden;
+          animation: connection_pulse 3s ease-in-out infinite;
+          transition: all 0.4s ease;
+          box-shadow: 
+            0 8px 20px rgba(0,0,0,0.5),
+            inset 0 0 0 2px rgba(255,255,255,0.1);
+        }
+        
+        .connection_node:nth-child(1) { animation-delay: 0s; }
+        .connection_node:nth-child(2) { animation-delay: 0.5s; }
+        .connection_node:nth-child(3) { animation-delay: 1s; }
+        .connection_node:nth-child(4) { animation-delay: 1.5s; }
+        
+        .connection_node::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+          animation: transmission_sweep 3s infinite;
+        }
+        
+        .connection_node:hover {
+          transform: scale(1.1) translateY(-3px);
+          box-shadow: 
+            0 15px 35px rgba(0,0,0,0.7),
+            inset 0 0 0 2px rgba(255,255,255,0.3);
+          border-color: #cccccc;
+        }
+        
+        .terminal_output {
+          background: rgba(0,0,0,0.9);
+          color: #ffffff;
+          padding: 15px 25px;
+          font-family: 'Courier New', monospace;
+          font-size: 1.1rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          border: 2px solid rgba(255,255,255,0.3);
+          position: relative;
+        }
+        
+        .terminal_cursor {
+          display: inline-block;
+          width: 12px;
+          height: 20px;
+          background: #ffffff;
+          animation: cursor_blink 1.2s infinite;
+          margin-left: 8px;
+        }
+        
+        .structural_frame {
+          position: absolute;
+          border: 3px solid rgba(255,255,255,0.2);
+        }
+        
+        .frame_outer {
+          top: 15px;
+          left: 15px;
+          right: 15px;
+          bottom: 15px;
+        }
+        
+        .corner_reinforcements {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border: 3px solid #ffffff;
+        }
+        
+        .corner_tl {
+          top: 5px;
+          left: 5px;
+          border-right: none;
+          border-bottom: none;
+        }
+        
+        .corner_tr {
+          top: 5px;
+          right: 5px;
+          border-left: none;
+          border-bottom: none;
+        }
+        
+        .corner_bl {
+          bottom: 5px;
+          left: 5px;
+          border-right: none;
+          border-top: none;
+        }
+        
+        .corner_br {
+          bottom: 5px;
+          right: 5px;
+          border-left: none;
+          border-top: none;
+        }
+        
+        @media (prefers-color-scheme: light) {
+          .container {
+            background: linear-gradient(180deg, #f0f0f0 0%, #e0e0e0 50%, #d0d0d0 100%);
+          }
+          .connection_header {
+            background: linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(40,40,40,1) 50%, rgba(0,0,0,0.95) 100%);
+            color: #ffffff;
+            border-color: #ffffff;
+          }
+          .connection_node {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(240,240,240,0.98) 50%, rgba(255,255,255,0.95) 100%);
+            color: #000000;
+            border-color: #000000;
+          }
+          .connection_node:hover {
+            border-color: #333333;
+          }
+          .terminal_output {
+            background: rgba(255,255,255,0.9);
+            color: #000000;
+            border-color: rgba(0,0,0,0.3);
+          }
+          .terminal_cursor {
+            background: #000000;
+          }
+        }
+        
+        @media (prefers-reduced-motion) {
+          .container, .connection_node, .connection_header, .terminal_cursor {
+            animation: none;
+          }
+        }
+      </style>
+      
+      <div class="container">
+        <div class="infrastructure_grid"></div>
+        <div class="structural_frame frame_outer"></div>
+        <div class="corner_reinforcements corner_tl"></div>
+        <div class="corner_reinforcements corner_tr"></div>
+        <div class="corner_reinforcements corner_bl"></div>
+        <div class="corner_reinforcements corner_br"></div>
+        
+        <div class="connection_header">🌐 ESTABLISH CONNECTION 🌐</div>
+        
+        <div class="connection_matrix">
+          <a href="https://orcid.org/0000-0001-5671-3710" class="connection_node">
+            📊 ORCID
+          </a>
+          <a href="https://www.linkedin.com/in/amir-bahrami-0921a697" class="connection_node">
+            💼 LINKEDIN
+          </a>
+          <a href="https://a-bahrami.com" class="connection_node">
+            🌍 PORTFOLIO
+          </a>
+          <a href="https://a-bahrami.com/resume" class="connection_node">
+            📄 PUBLICATIONS
+          </a>
+        </div>
+        
+        <div class="terminal_output">
+          &gt; INNOVATION NEVER STOPS <span class="terminal_cursor"></span>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
