@@ -287,7 +287,7 @@
       <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=web&logoColor=white&labelColor=black" />
     </a>
     &nbsp;&nbsp;
-    <a href="https://a-bahrami.com/projects">
+    <a href="https://a-bahrami.com/publications">
       <img src="https://img.shields.io/badge/Publications-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white&labelColor=black" />
     </a>
   </p>
